@@ -1,0 +1,15 @@
+Private WithEvents RC As SpSharedRecoContext
+Private myGrammar As ISpeechRecoGrammar
+Dim sRecoString As String
+
+Private Sub Form_Load()
+Set RC = New SpSharedRecoContext
+Set myGrammar = RC.CreateGrammar
+myGrammar.DictationSetState SGDSActive
+
+End Sub
+
+Private Sub RC_Recognition(ByVal StreamNumber As Long, ByVal StreamPosition As Variant, ByVal RecognitionType As SpeechLib.SpeechRecognitionType, ByVal Result As SpeechLib.ISpeechRecoResult)
+Label1 = Result.PhraseInfo.GetText
+End Sub
+

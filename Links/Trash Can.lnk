@@ -1,0 +1,6 @@
+[Main]
+Path=Reserved\Trash.lnk
+Caption=Trash Can
+Marker=16,190
+Picture=Recycle Bin Full.png <AppPath>
+Key=
